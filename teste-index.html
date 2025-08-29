@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site — ABC Advocacia</title>
+  <style>
+    /* Estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0D1B2A, #1B263B);
+      color: #fff;
+      padding: 20px;
+    }
+    .navbar a {
+      color: #66fcf1;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .botoes {
+      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .botoes button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+      color: #fff;
+    }
+    /* Glassmorphism */
+    .glass-btn {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glass-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
+    }
+    /* Gradient animado */
+    .gradient-btn {
+      background: linear-gradient(45deg, #ff6b6b, #feca57, #ff9ff3);
+      background-size: 200% 200%;
+    }
+    .gradient-btn:hover {
+      background-position: right center;
+      transform: scale(1.05);
+    }
+    /* Neon glow */
+    .neon-btn {
+      background: transparent;
+      border: 2px solid #00f5ff;
+      text-shadow: 0 0 5px #00f5ff;
+      box-shadow: 0 0 10px #00f5ff;
+    }
+    .neon-btn:hover {
+      box-shadow: 0 0 20px #00f5ff, 0 5px 15px rgba(0, 245, 255, 0.5);
+      transform: translateY(-2px);
+    }
+    /* Ripple (ondulação) */
+    .ripple-btn {
+      position: relative;
+      overflow: hidden;
+      background: #0984e3;
+    }
+    .ripple-btn::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+    .ripple-btn:active::after {
+      width: 200px;
+      height: 200px;
+    }
+
+    /* Nova classe para imagem tela cheia */
+    .imagem-cheia {
+      height: 85vh;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Nosso Site</h1>
+
+  <div class="botoes">
+    <!-- Botões com efeitos aplicados conforme solicitado -->
+    <button class="gradient-btn" onclick="window.open('https://profroberto.com.br/curso-html-css','_blank')">
+      Acesse o site do nosso parceiro!
+    </button>
+    <button class="neon-btn" onclick="location.href='home.html'">Home</button>
+    <button class="gradient-btn" onclick="location.href='servicos.html'">Serviços</button>
+    <button class="ripple-btn" onclick="location.href='contato.html'">Fale Conosco</button>
+    <button class="glass-btn" onclick="window.open('https://api.whatsapp.com/send/?phone=55319996494660&text=Contato via site','_blank')">
+      Contato via site → Whatsapp: 51 99649‑4660
+    </button>
+  </div>
+
+  <!-- Imagem ocupa a altura total da tela sem rolagem -->
+  <img src="Imagens/fotos/equipe.jpg" class="imagem-cheia" alt="Nossa equipe">
+</body>
+</html>
